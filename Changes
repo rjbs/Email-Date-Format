@@ -1,0 +1,4 @@
+Revision history for Email-Date-Format
+
+1.000     2007-11-30
+          refactored from Email::Date to avoid large prereq chain
