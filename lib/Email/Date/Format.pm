@@ -4,10 +4,11 @@ use warnings;
 
 package Email::Date::Format;
 
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 our @EXPORT_OK = qw[email_date email_gmdate];
 
-use Exporter 'import';
+use Exporter;
+BEGIN { our @ISA = 'Exporter' }
 use Time::Local ();
 
 =head1 NAME

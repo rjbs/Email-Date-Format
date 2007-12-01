@@ -1,4 +1,7 @@
 Revision history for Email-Date-Format
 
+1.001     2007-12-01
+          be isa Exporter, since "use Exporter 'import'" wasn't in 5.006
+
 1.000     2007-11-30
           refactored from Email::Date to avoid large prereq chain
