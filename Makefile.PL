@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile (
   AUTHOR        => 'Ricardo SIGNES <rjbs@cpan.org>',
-  ABSTRACT      => "produce RFC 822 date strings",
+  ABSTRACT      => "produce RFC 8822 date strings",
   NAME          => 'Email::Date::Format',
   (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM     => {
