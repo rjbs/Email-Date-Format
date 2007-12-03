@@ -108,6 +108,10 @@ __END__
 
 =back
 
+=head1 SEE ALSO
+
+L<DateTime::Format::Mail>
+
 =head1 PERL EMAIL PROJECT
 
 This module is maintained by the Perl Email Project
