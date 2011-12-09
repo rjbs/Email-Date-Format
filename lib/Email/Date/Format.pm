@@ -126,7 +126,7 @@ Adapted from Email::Date, by Casey West.
 
 =head1 COPYRIGHT
 
-Copyright (c) 2007, Ricarod SIGNES.  This module is free software; you can
+Copyright (c) 2007, Ricardo SIGNES.  This module is free software; you can
 redistribute it and/or modify it under the same terms as Perl itself.
 
 =cut
