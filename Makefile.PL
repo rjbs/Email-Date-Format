@@ -11,4 +11,9 @@ WriteMakefile (
     'Time::Local' => '0.000', # core
   },
   VERSION_FROM  => 'lib/Email/Date/Format.pm',
+  META_MERGE    => {
+    resources     => {
+      repository    =>  'https://github.com/rjbs/email-date-format',
+    },
+  },
 );
