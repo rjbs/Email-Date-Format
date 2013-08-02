@@ -1,19 +1,13 @@
 use 5.006;
 use strict;
 use warnings;
-
 package Email::Date::Format;
+# ABSTRACT: produce RFC 2822 date strings
 
-our $VERSION = '1.002';
 our @EXPORT_OK = qw[email_date email_gmdate];
 
-use Exporter;
-BEGIN { our @ISA = 'Exporter' }
+use Exporter 5.57 'import';
 use Time::Local ();
-
-=head1 NAME
-
-Email::Date::Format - produce RFC 2822 date strings
 
 =head1 SYNOPSIS
 
@@ -34,11 +28,7 @@ This module provides a simple means for generating an RFC 2822 compliant
 datetime string.  (In case you care, they're not RFC 822 dates, because they
 use a four digit year, which is not allowed in RFC 822.)
 
-=head2 FUNCTIONS
-
-=over 4
-
-=item email_date
+=func email_date
 
   my $date = email_date; # now
   my $date = email_date( time - 60*60 ); # one hour ago
@@ -50,7 +40,7 @@ of C<time> is used.
 
 C<format_date> is exported only if requested.
 
-=item email_gmdate
+=func email_gmdate
 
   my $date = email_gmdate;
 
@@ -103,30 +93,3 @@ BEGIN {
 };
 
 1;
-
-__END__
-
-=back
-
-=head1 SEE ALSO
-
-L<DateTime::Format::Mail>
-
-=head1 PERL EMAIL PROJECT
-
-This module is maintained by the Perl Email Project
-
-L<http://emailproject.perl.org/wiki/Email::Date::Format>
-
-=head1 AUTHOR
-
-Ricardo SIGNES, <F<rjbs@cpan.org>>.
-
-Adapted from Email::Date, by Casey West.
-
-=head1 COPYRIGHT
-
-Copyright (c) 2007, Ricardo SIGNES.  This module is free software; you can
-redistribute it and/or modify it under the same terms as Perl itself.
-
-=cut
