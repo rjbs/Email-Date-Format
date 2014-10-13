@@ -38,7 +38,7 @@ It returns a string representing the date and time of the input, as
 specified in RFC 2822. If no input value is provided, the current value
 of C<time> is used.
 
-C<format_date> is exported only if requested.
+C<email_date> is exported only if requested.
 
 =func email_gmdate
 
@@ -47,7 +47,7 @@ C<format_date> is exported only if requested.
 C<email_gmdate> is identical to C<email_date>, but it will return a string
 indicating the time in Greenwich Mean Time, rather than local time.
 
-C<format_gmdate> is exported only if requested.
+C<email_gmdate> is exported only if requested.
 
 =cut
 
