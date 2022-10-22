@@ -54,8 +54,12 @@ C<email_gmdate> is exported only if requested.
 sub _tz_diff {
   my ($time) = @_;
 
-  my $diff  =   Time::Local::timegm(localtime $time)
-              - Time::Local::timegm(gmtime    $time);
+  my @localtime = localtime $time;
+  my @gmtime    = gmtime    $time;
+  $localtime[5] += 1900;
+  $gmtime[5]    += 1900;
+  my $diff  =   Time::Local::timegm(@localtime)
+              - Time::Local::timegm(@gmtime);
 
   my $direc = $diff < 0 ? '-' : '+';
   $diff  = abs $diff;
