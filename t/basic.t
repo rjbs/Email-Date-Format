@@ -1,6 +1,7 @@
-use Test::More tests => 7;
-use strict;
-$^W = 1;
+use v5.12.0;
+use warnings;
+
+use Test::More;
 
 use Email::Date::Format qw(email_date email_gmdate);
 
@@ -41,3 +42,5 @@ is(tz($badt + 60), "+1100", "positive timezone after year rollover");
 $ENV{TZ} = "UTC+9";
 is(tz($badt - 60), "-0900", "negative timezone before year rollover");
 is(tz($badt + 60), "-0900", "negative timezone after year rollover");
+
+done_testing;

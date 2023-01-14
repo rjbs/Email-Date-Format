@@ -1,5 +1,4 @@
-use 5.006;
-use strict;
+use v5.12.0;
 use warnings;
 package Email::Date::Format;
 # ABSTRACT: produce RFC 2822 date strings
@@ -74,7 +73,7 @@ sub _format_date {
 
   sub {
     my ($time) = @_;
-    $time = time unless defined $time;
+    $time //= time;
 
     my ($sec, $min, $hour, $mday, $mon, $year, $wday)
       = $local ? (localtime $time) : (gmtime $time);
