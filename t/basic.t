@@ -35,7 +35,7 @@ is(
 );
 
 my $badyear = 1900 + ((gmtime)[5] - 49) % 100;
-my $badt = Time::Local::timegm(0, 0, 0, 1, 0, $badyear);
+my $badt = Time::Local::timegm_modern(0, 0, 0, 1, 0, $badyear);
 $ENV{TZ} = "UTC-11";
 is(tz($badt - 60), "+1100", "positive timezone before year rollover");
 is(tz($badt + 60), "+1100", "positive timezone after year rollover");

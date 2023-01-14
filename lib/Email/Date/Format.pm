@@ -6,7 +6,7 @@ package Email::Date::Format;
 our @EXPORT_OK = qw[email_date email_gmdate];
 
 use Exporter 5.57 'import';
-use Time::Local ();
+use Time::Local 1.27 ();
 
 =head1 SYNOPSIS
 
@@ -57,8 +57,8 @@ sub _tz_diff {
   my @gmtime    = gmtime    $time;
   $localtime[5] += 1900;
   $gmtime[5]    += 1900;
-  my $diff  =   Time::Local::timegm(@localtime)
-              - Time::Local::timegm(@gmtime);
+  my $diff  =   Time::Local::timegm_modern(@localtime)
+              - Time::Local::timegm_modern(@gmtime);
 
   my $direc = $diff < 0 ? '-' : '+';
   $diff  = abs $diff;
